@@ -7,14 +7,24 @@
     <title>Cleanshirt</title>
     <style>
         * {font-family: 'Raleway', sans-serif;}
-        .centered{width: 50%; height:500px; margin: 40px auto 0;}
+        @media (max-width: 599px){
+        .centered {width: 85%; height:500px; margin: 50px auto 0;}
+        }
+        @media (min-width: 600px){
+        .centered {width: 70%; height:500px; margin: 50px auto 0;}
+        }
+        a {color: #25536D}
+        hr {width: 75%; border: solid #ddd; border-width: 1px 0 0; margin: 20px auto}
     </style>
 </head>
 <body>
     <div class="centered">
-        <h1>Welcome to teef.dev</h1>
-        <p>This will be a very clean site, dealing mostly with my development experience, and then some very random items that are totally unrelated.</p>
-        <hr style="width: 90%">
+        <h1>teef.dev</h1>
+        <p>You might notice that this is a pretty spare website - that's by design! I love the <a href="https://leiningen.org/">leinigen</a> site, and wanted to build a webapp dealing mostly with my development experience, and then some very random items that are totally unrelated.</p>
+        <hr>
+        <p>I'm a software engineer in salt lake, currently working with <a href="https://medicine.utah.edu/ccts/bmic/">these amazing folks</a>.</p>
+        <p>A few other places to see my work are at <a href="http://thisapp.digital">thisapp.digital</a> as well as this rather old-school <a href="https://tylerford.io/">bio</a>.</p>
+
     </div>
     
 </body>
