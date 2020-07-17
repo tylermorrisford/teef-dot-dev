@@ -4,29 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <title>Cleanshirt</title>
+    <title>t.d</title>
     <style>
         * {font-family: 'Raleway', sans-serif; line-height: 1.5;}
         @media (max-width: 599px){
         .centered {width: 85%; height:500px; margin: 50px auto 0;}
         }
         @media (min-width: 600px){
-        .centered {width: 70%; height:500px; margin: 50px auto 0;}
+        .centered {width: 60%; height:500px; margin: 50px auto 0;
+            text-align: justify;}
         }
         a {color: #25536D}
-        hr {width: 75%; border: solid #ddd; border-width: 1px 0 0; margin: 20px auto}
+        h2{text-align: center; justify-items: center;}
+        hr {border: solid #ddd; border-width: 1px 0 0; margin: 30px auto}
+        .justify{text-align: justify;}
+        .titleLeft{display: grid; grid-template-columns: 1fr 2fr;}
+        .titleRight{display: grid; grid-template-columns: 2fr 1fr;}
     </style>
 </head>
 <body>
     <div class="centered">
         <h1>teef.dev</h1>
-        <p>You might notice that this is a pretty spare website - that's by design! I love the <a href="https://leiningen.org/">leinigen</a> site, and wanted to build a webapp dealing mostly with my development experience, and then some very random items that are totally unrelated.</p>
+        <p>Yes, this is a pretty spare website - and that is totally by design. I love the <a href="https://leiningen.org/">leinigen</a> site, and wanted to build a super clean webapp dealing mostly with my development experience, and then some very random items that are totally unrelated.</p>
         <hr>
-        <p>I'm a software engineer in salt lake, currently working with <a href="https://medicine.utah.edu/ccts/bmic/">these amazing folks</a>.</p>
-        <p>A few other places to see my work are at <a href="http://thisapp.digital">thisapp.digital</a> as well as this rather old-school <a href="https://tylerford.io/">bio</a>, which has links to many other projects, a form that stores your message in firebase (as effective as training a pigeon) and a photo from when my hair was long.</p>
-        <p>The code for this site is <a href="https://github.com/tylermorrisford/teef-dot-dev">here</a>.</p>
-
+        <!-- <p>I'm a software engineer in salt lake, currently working with <a href="https://medicine.utah.edu/ccts/bmic/">these amazing folks</a>. A few other places to see my work are at <a href="http://thisapp.digital">thisapp.digital</a> as well as this rather old-school <a href="https://tylerford.io/">bio</a>, which has links to many other projects, and (bonus!) a form that stores your message in firebase (as effective as training a homing pigeon) and a photo from when my hair was long.</p>
+        <p>The code for this site is <a href="https://github.com/tylermorrisford/teef-dot-dev">here</a>, but most of the interesting stuff is in the nginx configuration.</p>
+        <hr> -->
+        <div class="titleLeft">
+            <div><h2>why</h2></div>
+            <div class="justify">I'm a software engineer in salt lake, currently working with <a href="https://medicine.utah.edu/ccts/bmic/">these amazing folks</a>. Other spots to see my work are <a href="http://thisapp.digital">thisapp.digital</a>, as well as this rather old-school <a href="https://tylerford.io/">bio</a>, which has links to many other projects, and (bonus!) a form that stores your message in firebase (as effective as training a homing pigeon) and a photo from when my hair was long.
+            <p>The code for <em>this</em> site is <a href="https://github.com/tylermorrisford/teef-dot-dev">here</a>, but most of the interesting stuff is in the nginx configuration. Unless you get excited by an express server that sends one html file?</p></div>
+        </div>
+        <hr>
+        <div class="titleRight">
+            <div class="justify"><span id="hockey"></span> 
+            <p>I know it sounds a little weird to be excited about something like that, but 2020 has been both terrifying and boring, and a little normalcy will go a long way even if it's really not that normal at all.</p>    
+            </div>
+            <div><h2>random</h2></div>
+        </div>
+        
+        <footer style="text-align: center;">
+            <hr>
+            &copy; <span id="year"></span> teef</footer>
     </div>
+    <script type="text/javascript">
     
+    var today = new Date();
+    var year = today.getFullYear();
+    document.getElementById("year").innerHTML = year;
+    
+    var dateString = today.toDateString()
+    var current = parseInt(dateString.substring(8,10))
+    var daysLeft = 31 - current;
+    document.getElementById("hockey").innerHTML =`Hockey is back in ${daysLeft.toString()} days!`;
+    console.log(dateString.substring(8,10));
+    console.log(daysLeft);
+    
+
+
+    </script>
 </body>
 </html>
