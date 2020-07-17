@@ -56,12 +56,13 @@
     var dateString = today.toDateString()
     var current = parseInt(dateString.substring(8,10))
     var daysLeft = 31 - current;
-    document.getElementById("hockey").innerHTML =`Hockey is back in ${daysLeft.toString()} days!`;
-    console.log(dateString.substring(8,10));
-    console.log(daysLeft);
+    var hockeyTimer = document.getElementById("hockey")
     
-
-
+    if ( daysLeft > 1 ) {
+        hockeyTimer.innerHTML = `Hockey is back in ${daysLeft.toString()} days!`;
+    } else {
+        hockeyTimer.innerHTML = `Hockey is back!!`;
+    }
     </script>
 </body>
 </html>
