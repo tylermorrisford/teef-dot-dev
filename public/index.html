@@ -35,7 +35,7 @@
         </div>
         <hr>
         <div class="titleRight">
-            <div class="justify"><span id="hockey"></span> 
+            <div class="justify">Hockey is BAAACK!</span> 
             <p>I know it sounds a little weird to be excited about something like that, but 2020 has been both terrifying and boring, and having something to look forward to could do wonders for mental health. Plus, you know, it's hockey!</p>    
             </div>
             <div><h2>random</h2></div>
@@ -51,16 +51,6 @@
     var year = today.getFullYear();
     document.getElementById("year").innerHTML = year;
     
-    var dateString = today.toDateString()
-    var current = parseInt(dateString.substring(8,10))
-    var daysLeft = 31 - current;
-    var hockeyTimer = document.getElementById("hockey")
-    
-    if ( daysLeft > 1 ) {
-        hockeyTimer.innerHTML = `Hockey is back in ${daysLeft.toString()} days!`;
-    } else {
-        hockeyTimer.innerHTML = `Hockey is back!!`;
-    }
     </script>
 </body>
 </html>
