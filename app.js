@@ -13,14 +13,6 @@ app.get('/', function(req, res){
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/favicon-16x16.png')
-})
-
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/favicon-32x32.png')
-})
-
 app.listen(PORT, () => {
     console.log('app started on port: ' + PORT);
 })
